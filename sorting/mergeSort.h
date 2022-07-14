@@ -4,7 +4,6 @@
 // meio/2
 // sub vetores
 //compara eles e vai juntando
-
 void merge(int* v, int tam, int* vL, int tam_vL, int* vR, int tam_vR) {
 
     // vetores
