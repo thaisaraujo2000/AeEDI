@@ -36,12 +36,12 @@ void inserirNoIt(struct noBst* raiz, struct noBst* novoNo) {
                 return;
             }
             else {
-                raiz = raiz->esq; // novo nó
+                raiz = raiz->esq; // novo nÃ³
             }
         }
         else { // caso 2: inserir na direita
             if (raiz->dir == NULL) {
-                raiz->dir = novoNo; // novo nó
+                raiz->dir = novoNo; // novo nÃ³
                 return;
             }
             else {
@@ -56,7 +56,7 @@ void inserirNoRec(struct noBst* raiz, struct noBst* novoNo) {
         if (raiz->esq == NULL) { // raiz esq NULL
             raiz->esq = novoNo;
         }
-        else { // raiz esq não NULL
+        else { // raiz esq nÃ£o NULL
             inserirNoRec(raiz->esq, novoNo);
         }
     }
@@ -125,7 +125,6 @@ bool buscar(struct bst* bst, int val, bool rec) {
     else {
         return buscarIt(bst->raiz, val);
     }
-    bst->tam++;
 }
 
 void navEmOrdem(struct noBst* raiz) {
@@ -234,23 +233,23 @@ struct noBst* removerRec(struct noBst* raiz, int val) {
     return raiz;
 }
 
-// caso 1: nó folha
-// - navegar até o pai
-// - desalocar nó folha
+// caso 1: nÃ³ folha
+// - navegar atÃ© o pai
+// - desalocar nÃ³ folha
 // - pai -> filho (esq/dir) == NULL
 
-// caso 2: nó só tem um filho
-// - navegar até o pai
-// - aux apontando p/ o filho do nó a ser removido
-// - deslocar o nó a ser removido
-// - atualizar o filho do nó pai para aux
+// caso 2: nÃ³ sÃ³ tem um filho
+// - navegar atÃ© o pai
+// - aux apontando p/ o filho do nÃ³ a ser removido
+// - deslocar o nÃ³ a ser removido
+// - atualizar o filho do nÃ³ pai para aux
 
-// caso 3: nó tem 2 filhos
+// caso 3: nÃ³ tem 2 filhos
 // aux = min(raiz->dir)
 // aux->esq = raiz->esq
 // aux->dir = raiz->dir
-// 1: trazer para a pos do nó removido min(noRemovido->dir)
-// 2: trazer para a pos do nó removido max(noRemovido->esq)
+// 1: trazer para a pos do nÃ³ removido min(noRemovido->dir)
+// 2: trazer para a pos do nÃ³ removido max(noRemovido->esq)
 
 void remover(struct bst* bst, int val) {
     if (bst->raiz == NULL) {
